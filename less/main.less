@@ -67,15 +67,14 @@ h1, h2, h3, h4, h5, h6 {
     p {
         margin: 0;
     }
+    @media (min-width: 640px) {
+        font-size: 1.6rem;
+        color: #666666;
+        border-top: none;
+        padding: 3rem 5rem;
+    }
 }
-@media (min-width: 640px) {
-.footer {
-    font-size: 1.6rem;
-    color: #666666;
-    border-top: none;
-    padding: 3rem 5rem;
-}
-}
+
 /* Footer */
 
 /* CONTENT */
@@ -83,11 +82,22 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2.2rem 2.5rem 1.7rem 2.5rem;
     color: #909090;
 
+    @media (min-width: 640px) {
+        padding: 3.5rem 5rem 3.1rem;
+        color: #aaa;
+    }
+
     h1 {
         color: #6f7173;
         font-size: 2.1rem;
          margin-bottom: 1.6rem;
          margin-top: 0;
+
+         @media (min-width: 640px) {
+            font-size: 4.2rem;
+            margin-bottom: 0.3rem;
+            margin-top: 0;
+        }
     }
 
     h2 {
@@ -95,6 +105,12 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.7rem;
         margin-bottom: 1.5rem;
         margin-top: 0;
+
+        @media (min-width: 640px) {
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+            margin-top: 0;
+        }
     }
 
     p {
@@ -102,8 +118,18 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.63;
         margin: 0;
 
+        @media (min-width: 640px) {
+            font-size: 1.5rem;
+            line-height: 1.74;
+            margin-top: 2rem;
+        }
+
         &:after{
-    content: 'When an unknown printer took a galley of type and scrambled It to make a type specimen book. It has survived not only five centuries But also the leap into electronic typesetting, Remaining essentially unchanged. It was popularised.'
+            content: 'When an unknown printer took a galley of type and scrambled It to make a type specimen book. It has survived not only five centuries But also the leap into electronic typesetting, Remaining essentially unchanged. It was popularised.';
+
+            @media (min-width: 640px) {
+                content: '';
+            }
         }
     }
 
@@ -130,29 +156,6 @@ h1, h2, h3, h4, h5, h6 {
     .content {
         background: #333333;
     }
-    .content-inner {
-        padding: 3.5rem 5rem 3.1rem;
-        color: #aaa;
-
-        h1 {
-            font-size: 4.2rem;
-            margin-bottom: 0.3rem;
-            margin-top: 0;
-        }
-
-        h2 {
-            font-size: 2.6rem;
-            margin-bottom: 2rem;
-            margin-top: 0;
-        }
-
-        p {
-            font-size: 1.5rem;
-            line-height: 1.74;
-            margin-top: 2rem;
-        }
-    }
-
     .content-inner > * {
         margin: 0;
     }
@@ -170,9 +173,6 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: 5.7rem;
         width: 50%;
         float: right;
-    }
-        .content-inner p:after {
-        content: '';
     }
     .accordion-row {
         display: block;
@@ -223,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
 .features .features-list {
     padding: 0;
     max-width: 1072px;
+
+    @media (min-width: 640px) {
+        padding: 6.5rem 0 4.3rem;
+    }
 }
 .features-list li,
 .features-list li > * {
@@ -234,7 +238,15 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: solid 1px #cccccc;
         list-style: none;
         overflow: hidden;
-    }
+
+        @media (min-width: 640px) {
+            border: 0;
+            padding: 0;
+            text-align: center;
+            float: left;
+            width: 33.3%;
+        }
+     }
     .features-img {
         width: 6.9rem;
         height: 6.9rem;
@@ -242,17 +254,35 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 50%;
         position: relative;
         float: left;
+
+        @media (min-width: 640px) {
+            margin: auto;
+            width: 18.6rem;
+            height: 18.6rem;
+            float: none;
+        }
     }
     h3 {
         color: #5094f2;
         font-size: 1.7rem;
         margin: 1.3rem 0 0 0;
+
+        @media (min-width: 640px) {
+            font-size: 2rem;
+            margin: 2.2rem 3rem 0 3rem;
+        }
     }
     p {
         color: #666666;
         font-size: 1.1rem;
         line-height: 1.2;
         margin: 0;
+
+        @media (min-width: 640px) {
+            font-size: 1.5rem;
+            line-height: 1.74;
+            margin: 0 4rem 0 4rem;
+        }
     }
 }
 
@@ -263,6 +293,10 @@ h1, h2, h3, h4, h5, h6 {
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%);
+
+     @media (min-width: 640px) {
+        font-size: 8.1rem;
+    }
  }
 .features-list li:first-child .features-img {
     background: #5094f2;
@@ -272,37 +306,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .features-list li:last-child .features-img {
     background: #ebbb11;
-}
-
-@media (min-width: 640px) {
-    .features .features-list {
-        padding: 6.5rem 0 4.3rem;
-    }
-    .features-list li {
-        border: 0;
-        padding: 0;
-        text-align: center;
-        float: left;
-        width: 33.3%;
-    }
-    .features-list .features-img {
-        margin: auto;
-        width: 18.6rem;
-        height: 18.6rem;
-        float: none;
-    }
-    .features-img [class^="icon-"] {
-        font-size: 8.1rem;
-    }
-    .features-list h3 {
-        font-size: 2rem;
-        margin: 2.2rem 3rem 0 3rem;
-    }
-    .features-list p {
-        font-size: 1.5rem;
-        line-height: 1.74;
-        margin: 0 4rem 0 4rem;
-    }
 }
 /* Features */
 
@@ -316,10 +319,18 @@ h1, h2, h3, h4, h5, h6 {
     a {
         color: #fff;
     }
+    @media (min-width: 640px) {
+        background: url(../img/battlement1.png) repeat-x 0 100%, url(../img/carousel-background.jpg) no-repeat 0 0;
+        background-size: 12px 8px, cover;
+    }
 }
 .carousel-inner {
     padding: 1rem 0 0.6rem 0;
     position: relative;
+
+    @media (min-width: 640px) {
+        padding: 4rem 0 1rem 0;
+    }
 }
 .carousel-slides,
 .carousel-slides li,
@@ -336,11 +347,19 @@ h1, h2, h3, h4, h5, h6 {
 
     h3 {
         font-size: 1.5rem;
+
+        @media (min-width: 640px) {
+            font-size: 4.2rem;
+        }
     }
 
     p {
         font-size: 1.1rem;
         line-height: 1.73;
+
+        @media (min-width: 640px) {
+            font-size: 2.6rem;
+        }
     }
 
     .carousel-button {
@@ -354,6 +373,14 @@ h1, h2, h3, h4, h5, h6 {
         transition: background .3s ease-in, color .5s ease-in;
         position: relative;
 
+        @media (min-width: 640px) {
+                font-size: 2.2rem;
+                margin-top: 2.9rem;
+                padding: 0.7rem 1rem 1.2rem 4.6rem;
+                margin-top: 2.9rem;
+                border-radius: 0.3rem;
+        }
+
         &:before {
             content: '';
             width: 1.7rem;
@@ -365,6 +392,15 @@ h1, h2, h3, h4, h5, h6 {
             left: 0.7rem;
             top: 50%;
             margin-top: -0.8rem;
+
+            @media (min-width: 640px) {
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    background-size: 100%;
+                    background: #5094f2 url('../img/sprite.png') no-repeat 1px -71px;
+                    left: 1.1rem;
+                    margin-top: -1.35rem;
+            }
         }
 
         &:hover {
@@ -378,11 +414,19 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     width: 36.3%;
     text-align: right;
+
+    @media (min-width: 640px) {
+        width: 39.3%;
+    }
 }
 .carousel-content {
-    float: right;
-    width: 50%;
+     float: right;
+     width: 50%;
      margin-top: 5%;
+
+     @media (min-width: 640px) {
+        margin-top: 10.4%;
+    }
 }
 
 .carousel-control {
@@ -401,42 +445,6 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     margin-right: -5rem;
     transform: rotate(180deg);
-}
-@media (min-width: 640px) {
-    .carousel-slides h3 {
-        font-size: 4.2rem;
-    }
-    .carousel-slides p {
-        font-size: 2.6rem;
-    }
-    .carousel-inner {
-        padding: 4rem 0 1rem 0;
-    }
-    .carousel-content {
-        margin-top: 10.4%;
-    }
-    .carousel-img {
-        width: 39.3%;
-    }
-    .carousel {
-        background: url(../img/battlement1.png) repeat-x 0 100%, url(../img/carousel-background.jpg) no-repeat 0 0;
-        background-size: 12px 8px, cover;
-    }
-    .carousel-slides .carousel-button {
-        font-size: 2.2rem;
-        margin-top: 2.9rem;
-        padding: 0.7rem 1rem 1.2rem 4.6rem;
-        margin-top: 2.9rem;
-        border-radius: 0.3rem;
-}
-    .carousel-slides .carousel-button:before {
-        width: 2.7rem;
-        height: 2.7rem;
-        background-size: 100%;
-        background: #5094f2 url('../img/sprite.png') no-repeat 1px -71px;
-        left: 1.1rem;
-        margin-top: -1.35rem;
-}
 }
 /* Carousel */
 
